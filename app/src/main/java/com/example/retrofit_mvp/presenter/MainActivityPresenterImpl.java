@@ -1,10 +1,10 @@
-package com.example.retrofit_mvp.presenters;
+package com.example.retrofit_mvp.presenter;
 
-import com.example.retrofit_mvp.interactors.MainActivityInteractorImpl;
+import com.example.retrofit_mvp.model.interactor.MainActivityInteractorImpl;
 import com.example.retrofit_mvp.interfaces.MainActivityInteractor;
 import com.example.retrofit_mvp.interfaces.MainActivityPresenter;
 import com.example.retrofit_mvp.interfaces.MainActivityView;
-import com.example.retrofit_mvp.views.MainActivityViewImpl;
+import com.example.retrofit_mvp.view.MainActivityViewImpl;
 
 public class MainActivityPresenterImpl implements MainActivityPresenter {
 
@@ -22,27 +22,8 @@ public class MainActivityPresenterImpl implements MainActivityPresenter {
     }
 
     @Override
-    public void getData() {;
-    }
-
-    @Override
-    public int getUserId() {
-        return 0;
-    }
-
-    @Override
-    public int getId() {
-        return 0;
-    }
-
-    @Override
-    public String getTitle() {
-        return null;
-    }
-
-    @Override
-    public String getBody() {
-        return null;
+    public void showErrorMessage(String message) {
+        view.showErrorMessage(message);
     }
 
     @Override

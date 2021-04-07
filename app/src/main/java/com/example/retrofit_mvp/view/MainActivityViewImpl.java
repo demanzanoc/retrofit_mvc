@@ -1,15 +1,15 @@
-package com.example.retrofit_mvp.views;
+package com.example.retrofit_mvp.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.retrofit_mvp.R;
 import com.example.retrofit_mvp.interfaces.MainActivityPresenter;
 import com.example.retrofit_mvp.interfaces.MainActivityView;
-import com.example.retrofit_mvp.presenters.MainActivityPresenterImpl;
+import com.example.retrofit_mvp.presenter.MainActivityPresenterImpl;
 
 public class MainActivityViewImpl extends AppCompatActivity implements MainActivityView {
 
@@ -34,5 +34,10 @@ public class MainActivityViewImpl extends AppCompatActivity implements MainActiv
     @Override
     public void showPosts(StringBuilder data) {
         tvData.setText(data);
+    }
+
+    @Override
+    public void showErrorMessage(String message) {
+        Toast.makeText(this, "" + message, Toast.LENGTH_LONG).show();
     }
 }

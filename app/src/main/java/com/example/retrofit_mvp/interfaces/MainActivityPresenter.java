@@ -4,15 +4,7 @@ public interface MainActivityPresenter {
 
     void showPosts(StringBuilder data);
 
-    void getData();
-
-    int getUserId();
-
-    int getId();
-
-    String getTitle();
-
-    String getBody();
+    void showErrorMessage(String message);
 
     void getDataUser();
 
